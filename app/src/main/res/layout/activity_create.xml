@@ -1,33 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/colorRoyal">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/autour_one"
-        android:text="Login"
+        android:text="Sign Up"
         android:textSize="30dp"
         android:textStyle="bold"
         android:layout_marginTop="30dp"
         android:textAlignment="center"/>
     <EditText
-        android:id="@+id/login_email"
+        android:id="@+id/new_name"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:hint="Username"
+        android:inputType="text"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"/>
+    <EditText
+        android:id="@+id/new_email"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"/>
     <EditText
-        android:id="@+id/login_password"
+        android:id="@+id/new_password"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="200dp"
         android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"/>
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:hint="Confirm Password"
         android:inputType="textPassword"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
@@ -36,27 +55,21 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="300dp"
         android:background="@drawable/bg_transparent"
         android:fontFamily="@font/arsenal"
-        android:id="@+id/login_button"
+        android:id="@+id/create_button"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"/>
     <TextView
+        android:id="@+id/login_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:textColor="@android:color/white"
         android:layout_centerHorizontal="true"
-        android:text="You new here"
-        android:layout_below="@+id/login_button"/>
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_transparent"
-        android:text="Create a new account"
-        android:layout_marginTop="300dp"
-        android:id="@+id/new_button"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/white"/>
+        android:textAlignment="center"
+        android:text="Already have an account ?"
+        android:layout_below="@+id/create_button"/>
+
 </RelativeLayout>
