@@ -21,7 +21,9 @@
         android:inputType="textEmailAddress"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"/>
+        android:textColorHint="@android:color/white"
+        android:drawableLeft="@drawable/baseline_email_white_18dp"
+        android:drawablePadding="10dp"/>
     <EditText
         android:id="@+id/login_password"
         android:layout_width="350dp"
@@ -31,7 +33,9 @@
         android:inputType="textPassword"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"/>
+        android:textColorHint="@android:color/white"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/baseline_lock_white_18dp"/>
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"

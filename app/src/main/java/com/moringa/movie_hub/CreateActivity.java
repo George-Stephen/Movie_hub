@@ -101,7 +101,7 @@ public class CreateActivity extends AppCompatActivity implements View.OnClickLis
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user =  firebaseAuth.getCurrentUser();
                 if(user != null){
-                    Intent intent  = new Intent(CreateActivity.this, CreateActivity.class);
+                    Intent intent  = new Intent(CreateActivity.this, LoginActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();

@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @BindView(R.id.login_email) EditText mLoginEmail;
     @BindView(R.id.login_password)EditText mLoginPassword;
     @BindView(R.id.login_button) Button mLoginButton;
-    @BindView(R.id.create_button)Button mSignUpButton;
+    @BindView(R.id.new_button)Button mSignUpButton;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -79,11 +79,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                mProgressDialog.dismiss();
-                if(task.isSuccessful()){
-                    Toast.makeText(LoginActivity.this,"Login complete",Toast.LENGTH_LONG).show();
-                }else{
-                    Toast.makeText(LoginActivity.this,"This account does not exist",Toast.LENGTH_LONG).show();
+                if (task.isSuccessful()){
+                    Toast.makeText(LoginActivity.this,"Account has been created",Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(LoginActivity.this,"This service is unavailable",Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -95,7 +94,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = mAuth.getCurrentUser();
                 if (user != null){
-                    Intent intent = new Intent(LoginActivity.this, CreateActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, RecentActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
